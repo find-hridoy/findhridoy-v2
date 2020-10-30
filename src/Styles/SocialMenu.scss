@@ -1,0 +1,30 @@
+.social-menu {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  @include media("<=tablet") {
+    display: none;
+  }
+  .social-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .brand-icon {
+      font-size: 20px;
+      margin: 8px 0;
+      color: $primary_text;
+      transition: all ease-in-out 0.3s;
+      cursor: pointer;
+      &:hover {
+        color: $main_color;
+        transform: translateY(-3px);
+      }
+    }
+    span {
+      width: 2px;
+      height: 70px;
+      background: $primary_text;
+      margin-top: 10px;
+    }
+  }
+}

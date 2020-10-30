@@ -1,0 +1,215 @@
+@import "./Variables.scss";
+
+.main {
+  //   height: 70vh; //fallback option
+  //   height: calc(var(--vh, 1vh) * 50);
+  // background-color: gray;
+  padding: 120px 80px 0;
+  @include media("<=tablet") {
+    padding: 120px 70px 0;
+  }
+  @include media("<=phone") {
+    padding: 120px 30px 0;
+  }
+  .row {
+    flex-direction: column;
+    justify-content: center;
+    h5 {
+      font-size: 18px;
+      font-weight: 700;
+      // z-index: 10;
+      color: $main_color;
+      mix-blend-mode: difference;
+      @include media("<=tablet") {
+        font-size: 16px;
+      }
+      @include media("<=phone") {
+        font-size: 14px;
+      }
+      .line {
+        height: 40px;
+        overflow: hidden;
+        align-items: center;
+        display: flex;
+        @include media("<=tablet") {
+          height: 35px;
+        }
+        @include media("<=phone") {
+          height: 30px;
+        }
+      }
+    }
+    h1 {
+      font-size: 66px;
+      font-weight: 800;
+      // z-index: 10;
+      color: $primary_text;
+      mix-blend-mode: difference;
+      @include media("<=tablet") {
+        font-size: 54px;
+      }
+      @include media("<=phone") {
+        font-size: 40px;
+      }
+      .line {
+        height: 90px;
+        overflow: hidden;
+        align-items: center;
+        display: flex;
+        @include media("<=tablet") {
+          height: 70px;
+        }
+        @include media("<=phone") {
+          height: 55px;
+        }
+      }
+    }
+    h2 {
+      font-size: 40px;
+      line-height: 1;
+      font-weight: 800;
+      // z-index: 10;
+      color: $secondary_text;
+      mix-blend-mode: difference;
+      @include media("<=tablet") {
+        font-size: 32px;
+      }
+      @include media("<=phone") {
+        font-size: 26px;
+      }
+      .line {
+        margin-bottom: 8px;
+        height: 60px;
+        overflow: hidden;
+        align-items: center;
+        display: flex;
+        @include media("<=tablet") {
+          height: 60px;
+        }
+        @include media("<=phone") {
+          height: 50px;
+        }
+      }
+    }
+    h4 {
+      font-size: 18px;
+      font-weight: 700;
+      // z-index: 10;
+      color: $secondary_text;
+      mix-blend-mode: difference;
+      @include media("<=tablet") {
+        font-size: 14px;
+      }
+      @include media("<=phone") {
+        font-size: 12px;
+      }
+      .line {
+        margin-bottom: 8px;
+        height: 120px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        @include media("<=tablet") {
+          height: 110px;
+        }
+        @include media("<=phone") {
+          height: 100px;
+        }
+      }
+    }
+    .btn-row {
+      margin-top: 20px;
+      width: 180px;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      @include media("<=tablet") {
+        width: 150px;
+      }
+      @include media("<=phone") {
+        width: 140px;
+      }
+      button {
+        border: 1px solid $main_color;
+        background: transparent;
+        height: 45px;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 700;
+        color: $main_color;
+        cursor: pointer;
+        z-index: 1;
+        transition: transform ease-in-out 0.6s;
+        &:hover {
+          color: $main_bg;
+          &::after {
+            transform: scale(1);
+          }
+        }
+        &:focus {
+          outline: none;
+        }
+        &::after {
+          content: "";
+          width: 300px;
+          height: 300px;
+          background: $main_color;
+          position: absolute;
+          left: -5%;
+          bottom: -220%;
+          border-radius: 50%;
+          transform: scale(0);
+          z-index: -1;
+          transition: transform ease-in-out 0.6s;
+        }
+        @include media("<=tablet") {
+          font-size: 15px;
+          font-weight: 600;
+          height: 40px;
+        }
+        @include media("<=phone") {
+          font-size: 14px;
+        }
+      }
+      // a {
+      //   font-size: 1.6rem;
+      //   color: #000;
+      //   text-decoration: none;
+      //   display: flex;
+      //   align-items: center;
+      //   font-weight: 600;
+      //   @include media("<=tablet") {
+      //     font-size: 1.3rem;
+      //   }
+      //   @include media("<=phone") {
+      //     font-size: 1.1rem;
+      //   }
+      //   svg {
+      //     margin-left: 16px;
+      //     border: 2px solid black;
+      //     padding: 12px;
+      //     height: 24px;
+      //     width: 24px;
+      //     border-radius: 100px;
+      //     transition: 0.4s ease-in-out;
+      //     @include media("<=tablet") {
+      //       padding: 6px;
+      //       width: 20px;
+      //       height: 20px;
+      //     }
+      //     @include media("<=phone") {
+      //       padding: 4px;
+      //       width: 16px;
+      //       height: 16px;
+      //     }
+      //   }
+      //   &:hover {
+      //     svg {
+      //       background: black;
+      //       color: white;
+      //     }
+      //   }
+      // }
+    }
+  }
+}

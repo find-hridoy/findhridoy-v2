@@ -1,0 +1,28 @@
+@import "./Variables.scss";
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 128px;
+  z-index: 4;
+  @include media("<=phone") {
+    height: 96px;
+  }
+  .logo {
+    a {
+      font-size: 1.2rem;
+      letter-spacing: 0.5rem;
+      color: $primary_text;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  }
+  .nav-toggle {
+    .burger_hamburger-inner__14XT2 {
+      top: 0 !important;
+      &::after {
+        top: 0 !important;
+      }
+    }
+  }
+}
