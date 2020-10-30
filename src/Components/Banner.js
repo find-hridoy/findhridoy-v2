@@ -1,5 +1,6 @@
 import React from "react";
 import SocialMenu from "./SocialMenu";
+import resume from "../Assests/Resume_Hridoy v1.4.pdf";
 
 const Banner = () => {
   return (
@@ -26,17 +27,18 @@ const Banner = () => {
               <h4>
                 <div className="line">
                   <span>
-                    I'm a software engineer based in Boston, MA specializing in{" "}
-                    <br />
-                    building (and occasionally designing) exceptional websites,{" "}
-                    <br />
-                    applications, and everything in between.
+                    I am a tireless seeker of knowledge, an occasional purveyor
+                    of wisdom, and also,
+                    <br /> coincidentally, a Web Developer. Skilled in
+                    JavaScript, React, MongoDB, Firebase, <br /> Node, Express,
+                    Bootstrap, Material-UI, HTML, and CSS.
                   </span>
                 </div>
               </h4>
               <div className="btn-row">
-                {/* <a href="/">More about us <RightArrow /></a> */}
-                <button>Download Resume</button>
+                <a href={resume} download>
+                  <button>Download Resume</button>
+                </a>
               </div>
             </div>
           </div>

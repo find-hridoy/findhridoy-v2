@@ -1,15 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Burger from "react-css-burger";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 import Navigation from "./Navigation";
 
-const Header = () => {
+const Header = ({ history }) => {
   const [isActive, setIsActive] = useState(false);
   const [state, setState] = useState(false);
   const handleClick = () => {
     setIsActive(!isActive);
     setState(!state);
   };
+  useEffect(() => {
+    history.listen(() => {
+      setIsActive(!isActive);
+      setState(!state);
+    });
+  });
   return (
     <>
       <div className="header">
@@ -38,8 +44,4 @@ const Header = () => {
   );
 };
 
-export default Header;
-
-// onClick={() => setMenuState({ menuOpened: true })}
-
-// onClick={() => setMenuState({ menuOpened: false })}
+export default withRouter(Header);
